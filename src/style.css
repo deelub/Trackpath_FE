@@ -1,0 +1,228 @@
+*{
+font-size: 14px;
+font-family: "Inter", sans-serif;
+font-optical-sizing: auto;
+font-weight: 500;
+font-style: normal;
+margin:0;
+padding: 0;
+}
+
+body{
+   background-color:#000100 ;
+   
+   
+}
+
+/*General layout for all pages */
+
+.page-header{
+   display: flexbox;
+   
+}
+
+.page-header p{
+   color:white;
+    font-size: 55px;
+   text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+   animation: floatIn 2.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+   opacity: 0;
+   animation-delay: 0.7s;
+   text-align:center;
+  margin-top: 1em;
+
+}
+
+.page-header img{
+   float: right;
+}
+
+#logo{
+   width : 15%;
+   position: relative;
+   float: right;
+   padding-bottom: 10px;
+}
+
+
+form h2{
+font-size : 25px;
+padding-bottom: 1.5em;
+text-align: center;
+}
+
+form{
+   transform : translateY(15em);
+   text-align:center;
+   padding: 2em;
+   background-color: white;
+   border-radius: 1em;
+   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+   width: 40%;
+   margin: auto;
+   font-family: "Poppins", sans-serif;
+   color: black;
+   animation: fadeIn 1s ease-out;
+   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+}
+
+form label{
+   display: inline-block;
+   
+}
+.input{
+  border: 2px solid #4f4f4f;
+  border-radius: 0.6em;
+  width: 65%;
+  height: 2.5em;
+  padding: 0.5;
+  margin-top: 0.5em;
+  display:inline-block;
+  margin-bottom: 1.5em;
+  background-color: #f0f2f5;
+  color: black;
+  font-size: 1em;
+  outline: none;
+  transition: all 0.3s ease;
+   
+}
+
+.input:focus {
+  border-color: #00ff99;
+  box-shadow: 0 0 12px rgba(0, 255, 153, 0.6);
+  transform: scale(1.02);
+}
+
+button{
+    display: block;      /* takes full width row */
+  margin-left: 69%;      /* stick to the left */
+  margin-top: 0.5em;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #00c853, #009624);
+  margin-top: 0.5em;
+  border: none;
+  border-radius: 0.7em;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 200, 83, 0.3);
+  
+}
+
+button:hover{
+  background: linear-gradient(135deg, #00e676, #00c853);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 255, 153, 0.5);
+}
+
+button:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+
+/*HOMEPAGE STYLING */
+
+.homepage{
+  
+   display:flexbox;
+   justify-content: center;
+   align-items: center;
+    text-align: center;
+   margin-top: 10em;
+}
+
+.homepage h3 {
+   color: white;
+   font-size: 60px;
+   text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+   animation: floatIn 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+   opacity: 0;
+   animation-delay: 0.5s;
+}
+
+.homepage h2 {
+   color: white;
+   font-size: 75px;
+   text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+   animation: floatIn 2.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+   opacity: 0;
+   animation-delay: 0.7s;
+}
+
+#homepage-logo {
+   width: 15%;
+   margin: auto;
+   padding-bottom: 10px;
+   opacity: 0;
+   animation: fadeInScale 1.5s ease-out forwards;
+   animation-delay: 0.5s;
+   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+   transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+#homepage-logo:hover {
+   transform: scale(1.08) rotate(2deg);
+   filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0));
+}
+
+#homepage-btn {
+   background: linear-gradient(135deg, #ffffff, #dddddd);
+   float: none;
+   color: black;
+   padding: 14px 28px;
+   border: none;
+   border-radius: 50px;
+   text-decoration: none;
+   font-weight: bold;
+   font-size: 17px;
+   margin: 25px 30px;
+   display: inline-block;
+   box-shadow: 0 8px 10px rgba(255, 255, 255, 0.3);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   opacity: 0;
+   animation: fadeInScale 1.5s ease-out forwards;
+   animation-delay: 1s;
+   cursor: pointer;
+}
+
+#homepage-btn:hover {
+   transform: translateY(-4px) scale(1.05);
+   box-shadow: 0 12px 35px rgba(255, 255, 255, 0.6);
+}
+
+/* ANIMATIONS */
+@keyframes floatIn {
+   0% {
+      transform: translateY(-60px) scale(0.95);
+      opacity: 0;
+   }
+   100% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+   }
+}
+
+@keyframes fadeInScale {
+   0% {
+      transform: scale(0.8);
+      opacity: 0;
+   }
+   100% {
+      transform: scale(1);
+      opacity: 1;
+   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
