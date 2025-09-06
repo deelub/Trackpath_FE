@@ -33,6 +33,7 @@ const surname = document.getElementsByName("surname").value;
 const email= document.getElementsByName("email_ad").value;
 const username = document.getElementsByName("username").value;
 const password= document.getElementsByName("password").value;
+const emailtest = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i;
 
 ///LOGIN PAGE VALIDATION:
 //username : 1.no special characters
@@ -50,7 +51,33 @@ function Login_Validation (){
              alert("Name is invalid")
         }
 
-        
+        if (!emailtest.test(email)){      //email address validation
+            alert("Invalid email address")
+        }else{
+            //return message
+        }
+
+        //Password validation
+        if (/[a-zA-Z]/.test(password)){
+
+            if(/[0-9]/.test(password)){                //numerical presence check in password
+                
+              if (/^[!@#$%^&*()_+\-={}\[\]|:;"'<>,.?/~`]+$/.test(password)) {
+                    console.log("Valid: only allowed password special characters ✅");  // display other message
+              } else {
+                    console.log("Password does not cpntain any special characters");
+                }
+             }else{
+                console.log("Password should contain a number")
+
+        let password = "@#$%&*!";
+
+  
+            }
+        }else{
+           //go to the next page
+        }
+
 
     })
 }
